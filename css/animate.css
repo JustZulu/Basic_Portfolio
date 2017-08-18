@@ -1,0 +1,102 @@
+/*
+
+Made by Zack (Zulu)
+May be used by anyone.
+
+ */
+
+/* effect-switch: border switch (a tag) */
+.effect-switch a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.effect-switch a::before,
+.effect-switch a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.effect-switch a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.effect-switch a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.effect-switch a:hover::before,
+.effect-switch a:hover::after,
+.effect-switch a:focus::before,
+.effect-switch a:focus::after {
+    opacity: 1;
+}
+
+.effect-switch a:hover::before,
+.effect-switch a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.effect-switch a:hover::after,
+.effect-switch a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
+/* Animation For Text */
+
+.fade-top{position:relative;animation:animatetop 1s}
+@keyframes animatetop{from{top:-100px;opacity:0} to{top:0;opacity:1}}
+
+.fade-left{position:relative;animation:animateleft1 1s}
+@keyframes animateleft1{from{left:-100px;opacity:0} to{left:0;opacity:1}}
+
+.fade-right{position:relative;animation:animateright 1s}
+@keyframes animateright{from{right:-100px;opacity:0} to{right:0;opacity:1}}
+
+.fade-bottom{position:relative;animation:animatebottom 1s}
+@keyframes animatebottom{from{bottom:-100px;opacity:0} to{bottom:0;opacity:1}}
+
+.fade-zoom {animation:animatezoom 1.5s}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+.f-hr{position:relative;animation:animateleft 1.5s}
+@keyframes animateleft{from{left:-500px;opacity:0} to{left:0;opacity:1}}
+
+.whiplash {position:relative;animation:whiplash 1.5s;}
+@keyframes whiplash{
+    0%{left:-250px;opacity:0}
+    50%{left:250px;opacity:1;}
+    100%{left:0px;}
+}
+
+
+
